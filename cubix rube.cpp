@@ -1,16 +1,17 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // cubix rube.cpp : Defines the entry point for the console application.
-//
-#include "stdafx.h"
+// #include "stdafx.h"
 
 // #include "stl.h"
 
-#include <Windows.h>
+// #include <Windows.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
-#include <stdlib.h>
-#include <gl/glut.h>
+#include <GL/freeglut.h>
+#include <GL/freeglut.h>
+#include <GL/vvector.h>
+#include <GL/glut.h>
 #include <math.h>
 #include "vector"
 
@@ -40,10 +41,10 @@ char keyPressed = 'A';
 int theta = 0;
 int phi = 0;
 int beta = 0;
-int gamma = 0;
+int gammma = 0;
 int phi1 = 0;
 int beta1 = 0;
-int gamma1 = 0;
+int gammma1 = 0;
 
 int reset = 90;
 int reseter = 0;
@@ -510,7 +511,7 @@ void display(void)
 // 	float remain;
 // 	remain = (eChange/offC)*90;
 // 	if((abs(prevRot) == 2)){
-// 				// glRotatef((gamma*counterG), 1, 0, 0);//face
+// 				// glRotatef((gammma*counterG), 1, 0, 0);//face
 // 		// glRotatef(beta, 1, 0, 0);//side
 // 				// glRotatef((phi*counterP), 1, 0, 0);//side
 // 		if (prevRot == 2)
@@ -532,7 +533,7 @@ void display(void)
 				
 // 	}
 // 	if((abs(prevRot) == 3)){
-// 				// glRotatef((gamma*counterG), 0, 1, 0);//face
+// 				// glRotatef((gammma*counterG), 0, 1, 0);//face
 // 				// glRotatef((beta*counterB), 0, 1, 0);//side			
 // 		// glRotatef(phi, 0, 1, 0);//side
 // 		if (prevRot == 3)
@@ -552,7 +553,7 @@ void display(void)
 				
 // 	}
 // 	if((abs(prevRot) == 1)){
-// 		// glRotatef(gamma, 0, 0, 1);//face
+// 		// glRotatef(gammma, 0, 0, 1);//face
 // 				// glRotatef((beta*counterB), 0, 0, 1);//side
 // 				// glRotatef((phi*counterP), 0, 0, 1);//side	
 // 		if (prevRot == 1)
@@ -560,21 +561,21 @@ void display(void)
 // 			jump = 0;
 // 			changerGG = eChange;
 // 			eChange = 0;
-// 			gamma -= remain;
+// 			gammma -= remain;
 // 		}
 // 		else if (prevRot == -1)
 // 		{
 // 			jump = 0;
 // 			changerGG = eChange;
 // 			eChange = 0;
-// 			gamma += remain;
+// 			gammma += remain;
 // 		}	
 // 	}
 	
 // 	if((abs(prevRot) == 5)){
 // 		// glRotatef(beta1, 1, 0, 0);//side
 // 				// glRotatef((phi1*counterP), 1, 0, 0);//side
-// 				// glRotatef((gamma1*counterG), 1, 0, 0);//face
+// 				// glRotatef((gammma1*counterG), 1, 0, 0);//face
 // 		if (prevRot == 5)
 // 		{
 // 			jump = 1;
@@ -593,7 +594,7 @@ void display(void)
 // 	}
 // 	if((abs(prevRot) == 6)){
 // 				// glRotatef((beta1*counterB), 0, 1, 0);//side
-// 				// glRotatef((gamma1*counterG), 0, 1, 0);//face
+// 				// glRotatef((gammma1*counterG), 0, 1, 0);//face
 // 		// glRotatef(phi1, 0, 1, 0);//side
 // 		if (prevRot == 6)
 // 		{
@@ -615,20 +616,20 @@ void display(void)
 // 	if((abs(prevRot) == 4)){
 // 				// glRotatef((beta1*counterB), 0, 0, 1);//side
 // 				// glRotatef((phi1*counterP), 0, 0, 1);//side
-// 		// glRotatef(gamma1, 0, 0, 1);//face
+// 		// glRotatef(gammma1, 0, 0, 1);//face
 // 		if (prevRot == 4)
 // 		{
 // 			jump = 0;
 // 			changerGg = eChange;
 // 			eChange = 0;
-// 			gamma1 -= remain;
+// 			gammma1 -= remain;
 // 		}
 // 		else if (prevRot == -4)
 // 		{
 // 			jump = 0;
 // 			changerGg = eChange;
 // 			eChange = 0;
-// 			gamma1 += remain;
+// 			gammma1 += remain;
 // 		}
 
 
@@ -958,21 +959,21 @@ void checkrotation(int rot, int value) {
 
 	// conditions for checking possible rotations through 3D array
 	if((yval == 0)&&(abs(rot) == 2)){
-				glRotatef((gamma*counterG), 1, 0, 0);//face
+				glRotatef((gammma*counterG), 1, 0, 0);//face
 		glRotatef(beta, 1, 0, 0);//side
 				glRotatef((phi*counterP), 1, 0, 0);//side
 				
 				
 	}
 	if((xval == 0)&&(abs(rot) == 3)){
-				glRotatef((gamma*counterG), 0, 1, 0);//face
+				glRotatef((gammma*counterG), 0, 1, 0);//face
 				glRotatef((beta*counterB), 0, 1, 0);//side			
 		glRotatef(phi, 0, 1, 0);//side
 	
 				
 	}
 	if((zval == 0)&&(abs(rot) == 1)){
-		glRotatef(gamma, 0, 0, 1);//face
+		glRotatef(gammma, 0, 0, 1);//face
 				glRotatef((beta*counterB), 0, 0, 1);//side
 				glRotatef((phi*counterP), 0, 0, 1);//side
 	
@@ -982,17 +983,17 @@ void checkrotation(int rot, int value) {
 	if((yval == 2)&&(abs(rot) == 5)){
 		glRotatef(beta1, 1, 0, 0);//side
 				glRotatef((phi1*counterP), 1, 0, 0);//side
-				glRotatef((gamma1*counterG), 1, 0, 0);//face
+				glRotatef((gammma1*counterG), 1, 0, 0);//face
 	}
 	if((xval == 2)&&(abs(rot) == 6)){
 				glRotatef((beta1*counterB), 0, 1, 0);//side
-				glRotatef((gamma1*counterG), 0, 1, 0);//face
+				glRotatef((gammma1*counterG), 0, 1, 0);//face
 		glRotatef(phi1, 0, 1, 0);//side
 	}
 	if((zval == 2)&&(abs(rot) == 4)){
 				glRotatef((beta1*counterB), 0, 0, 1);//side
 				glRotatef((phi1*counterP), 0, 0, 1);//side
-		glRotatef(gamma1, 0, 0, 1);//face
+		glRotatef(gammma1, 0, 0, 1);//face
 	}
 
 }
@@ -1820,13 +1821,13 @@ void keyboard(unsigned char key, int x, int y)
 		prevRot = rotation;
 		rotation = 1;
 		keyPressed = 'g';
-		gamma += 2;
-		// if (gamma >360) gamma -= 360;
-		if (gamma != 0) {
-			// gamma = gamma + 2;
+		gammma += 2;
+		// if (gammma >360) gammma -= 360;
+		if (gammma != 0) {
+			// gammma = gammma + 2;
 			// keybd_event(VkKeyScan('g'),0xa2,0 , 0); //
 			// bot.KeyDown(0x47);
-			if ((abs(gamma) == 90)||(abs(gamma) == 180)||(abs(gamma) == 270)||(abs(gamma) == 360))
+			if ((abs(gammma) == 90)||(abs(gammma) == 180)||(abs(gammma) == 270)||(abs(gammma) == 360))
 			{
 				eChange += offC;
 				for (int x = 0; x < forL; x = x + 2)
@@ -1925,20 +1926,20 @@ void keyboard(unsigned char key, int x, int y)
 				myarray[2][2][x] = k;
 				}
 			}
-			if (gamma >= reset)
+			if (gammma >= reset)
 			{
 
 
 				// checker = checker - 10;
 			// changerGG += offC;
-			// if ((gamma == 90)||(gamma == 180)||(gamma == 270)||(gamma == 360))
+			// if ((gammma == 90)||(gammma == 180)||(gammma == 270)||(gammma == 360))
 			// {
 			// 	changerBB -= offC;
 			// 	changerPP -= offC;
 			// }
 				// rotation = 1;
 				jump = 0;
-				gamma = reseter;
+				gammma = reseter;
 			}
 			//glutPostRedisplay();
 		}
@@ -1948,11 +1949,11 @@ void keyboard(unsigned char key, int x, int y)
 		prevRot = rotation;
 		rotation = -1;
 		keyPressed = 'G';
-		gamma += -2;
-		// if (gamma < -360) gamma += 360;
-		if (gamma != 0) {
-			// gamma = gamma - 2;
-			if ((abs(gamma) == 90)||(abs(gamma) == 180)||(abs(gamma) == 270)||(abs(gamma) == 360))
+		gammma += -2;
+		// if (gammma < -360) gammma += 360;
+		if (gammma != 0) {
+			// gammma = gammma - 2;
+			if ((abs(gammma) == 90)||(abs(gammma) == 180)||(abs(gammma) == 270)||(abs(gammma) == 360))
 			{
 				eChange -= offC;
 				for (int x = 0; x < forL; x = x + 2)
@@ -2050,18 +2051,18 @@ void keyboard(unsigned char key, int x, int y)
 				myarray[0][2][x] = k;
 				}
 			}
-			if (gamma <= -reset)
+			if (gammma <= -reset)
 			{
 
 			// changerGG -= offC;
-			// if ((gamma == -90)||(gamma == -180)||(gamma == -270)||(gamma == -360))
+			// if ((gammma == -90)||(gammma == -180)||(gammma == -270)||(gammma == -360))
 			// {
 			// 	changerBB += offC;
 			// 	changerPP += offC;
 			// }
 				// rotation = -1;
 				jump = 0;
-				gamma = reseter;
+				gammma = reseter;
 			}
 			// glutPostRedisplay();
 		}
@@ -2071,8 +2072,8 @@ void keyboard(unsigned char key, int x, int y)
 		prevRot = rotation;
 		rotation = 4;
 		keyPressed = 'h';
-		gamma1 += 2;
-			if ((abs(gamma1) == 90)||(abs(gamma1) == 180)||(abs(gamma1) == 270)||(abs(gamma1) == 360))
+		gammma1 += 2;
+			if ((abs(gammma1) == 90)||(abs(gammma1) == 180)||(abs(gammma1) == 270)||(abs(gammma1) == 360))
 			{			
 			eChange += offC;	
 				for (int x = forl; x < 3; x = x + 2)
@@ -2172,13 +2173,13 @@ void keyboard(unsigned char key, int x, int y)
 				}
 			}
 
-		// if (gamma1 >360) gamma1 -= 360;
-		if (gamma1 != 0) {
-			// gamma1 = gamma1 + 2;
+		// if (gammma1 >360) gammma1 -= 360;
+		if (gammma1 != 0) {
+			// gammma1 = gammma1 + 2;
 			// keybd_event(VkKeyScan('g'),0xa2,0 , 0); //
 			// bot.KeyDown(0x47);
 
-			if (gamma1 >= reset)
+			if (gammma1 >= reset)
 			{
 
 
@@ -2189,7 +2190,7 @@ void keyboard(unsigned char key, int x, int y)
 				// }
 				// rotation = 1;
 				jump = 0;
-				gamma1 = reseter;
+				gammma1 = reseter;
 			}
 			//glutPostRedisplay();
 		}
@@ -2199,8 +2200,8 @@ void keyboard(unsigned char key, int x, int y)
 		prevRot = rotation;
 		rotation = -4;
 		keyPressed = 'H';
-		gamma1 += -2;
-			if ((abs(gamma1) == 90)||(abs(gamma1) == 180)||(abs(gamma1) == 270)||(abs(gamma1) == 360))
+		gammma1 += -2;
+			if ((abs(gammma1) == 90)||(abs(gammma1) == 180)||(abs(gammma1) == 270)||(abs(gammma1) == 360))
 			{		
 			eChange -= offC;		
 				for (int x = forl; x < 3; x = x + 2)
@@ -2299,11 +2300,11 @@ void keyboard(unsigned char key, int x, int y)
 				myarray[0][2][x] = k;
 				}
 			}
-		// if (gamma1 < -360) gamma1 += 360;
-		if (gamma1 != 0) {
-			// gamma1 = gamma1 - 2;
+		// if (gammma1 < -360) gammma1 += 360;
+		if (gammma1 != 0) {
+			// gammma1 = gammma1 - 2;
 
-			if (gamma1 <= -reset)
+			if (gammma1 <= -reset)
 			{
 
 				// changerGg -= offC;
@@ -2312,7 +2313,7 @@ void keyboard(unsigned char key, int x, int y)
 				// }
 				// rotation = -1;
 				jump = 0;
-				gamma1 = reseter;
+				gammma1 = reseter;
 			}
 			// glutPostRedisplay();
 		}
@@ -2807,10 +2808,10 @@ void keyboard(unsigned char key, int x, int y)
 		phi = 0;
 		theta = 0;
 		beta = 0;
-		gamma = 0;
+		gammma = 0;
 		phi1 = 0;
 		beta1 = 0;
-		gamma1 = 0;
+		gammma1 = 0;
 		changerPP = 0.0;
 		changerBB = 0.0;
 		changerGG = 0.0;
