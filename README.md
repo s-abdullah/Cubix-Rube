@@ -24,6 +24,6 @@ This was a graphics project where I created a Rubicks Cube in OpenGL, C++. This 
 
 	'r' to reset the cube
 
-### C0mpilation Command
+### Compilation Command
 g++ cubix\ rube.cpp -o main -lGL -lglut -lGLU
 
